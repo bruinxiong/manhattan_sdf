@@ -25,7 +25,7 @@ conda activate manhattan
 
 ### Data preparation
 
-Download ScanNet scene data evaluated in the paper from [Onedrive](https://zjueducn-my.sharepoint.com/:f:/g/personal/guohaoyu_zju_edu_cn/EqYvwsTjlcZIpA8CDlFYhKgBD57le2O_dHvpXF6zPv6Uyg?e=6FeMrC) and extract them into `data/`, make sure the path is consistent with [config file](./configs/0050.yaml#L38).
+Download ScanNet scene data evaluated in the paper from [Onedrive](https://zjueducn-my.sharepoint.com/:f:/g/personal/guohaoyu_zju_edu_cn/EqYvwsTjlcZIpA8CDlFYhKgBD57le2O_dHvpXF6zPv6Uyg?e=6FeMrC) / [Google Drive](https://drive.google.com/drive/folders/1VwnlvYe5ab-hz0AK2ugxWz3RiMFNA7Ot?usp=sharing) / [BaiduNetDisk (password:ap9k)](https://pan.baidu.com/s/1P5LWMvPzOLKiwEcMAjaDIw) and extract them into `data/`. Make sure that the path is consistent with [config file](./configs/scannet/0050.yaml#L38).
 
 Instruction to run on custom data is coming soon!
 
@@ -54,7 +54,7 @@ python run.py --type evaluate --cfg_file configs/scannet/0050.yaml gpus 0, exp_n
 
 If you find this code useful for your research, please use the following BibTeX entry.
 
-```
+```bibtex
 @inproceedings{guo2022manhattan,
   title={Neural 3D Scene Reconstruction with the Manhattan-world Assumption},
   author={Guo, Haoyu and Peng, Sida and Lin, Haotong and Wang, Qianqian and Zhang, Guofeng and Bao, Hujun and Zhou, Xiaowei},
@@ -63,4 +63,9 @@ If you find this code useful for your research, please use the following BibTeX 
 }
 ```
 
-<!-- ## Acknowledgement -->
+## Acknowledgement
+
+- Thanks to Lior Yariv for her excellent work [VolSDF](https://lioryariv.github.io/volsdf/).
+- Thanks to Jianfei Guo for his implementation of VolSDF [neurecon](https://github.com/ventusff/neurecon).
+- Thanks to Johannes Schönberger for his excellent work [COLMAP](https://github.com/colmap/colmap).
+- Thanks to Shaohui Liu for his customized implementation of [COLMAP](https://github.com/B1ueber2y/colmap/tree/c84269d693246d8294307cc32f851813f18b6a2d) as a submodule of [NerfingMVS](https://github.com/weiyithu/NerfingMVS).
